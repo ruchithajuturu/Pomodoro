@@ -18,11 +18,7 @@ const quotes = [
 ];
 
 const backgrounds = [
-    "https://source.unsplash.com/1920x1080/?cherry-blossom",
-    "https://source.unsplash.com/1920x1080/?sakura",
-    "https://source.unsplash.com/1920x1080/?pink-flowers",
-    "https://source.unsplash.com/1920x1080/?spring",
-    "https://source.unsplash.com/1920x1080/?blossom"
+    "https://wallpapercave.com/wp/wp2467894.jpg"
 ];
 
 function updateDisplay() {
@@ -64,7 +60,7 @@ function resetTimer() {
 }
 
 function setRandomBackground() {
-    const randomBackground = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+    const randomBackground = backgrounds[0]; // Use the single cherry blossom wallpaper
     document.body.style.backgroundImage = `url('${randomBackground}')`;
     document.body.style.backgroundSize = "cover";
     document.body.style.backgroundPosition = "center";
