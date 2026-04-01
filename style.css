@@ -1,13 +1,13 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+    background-image: url('https://source.unsplash.com/1920x1080/?cherry-blossom');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -47,8 +47,13 @@ body {
 }
 
 .quote {
-    font-size: 18px;
+    font-size: 20px;
     font-style: italic;
     margin-bottom: 20px;
-    color: #333;
+    font-family: 'Dancing Script', cursive;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
 }
