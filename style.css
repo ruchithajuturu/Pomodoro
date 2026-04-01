@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-image: url('https://wallpapercave.com/wp/wp2467894.jpg'); /* Direct link to cherry blossom wallpaper */
+    background-image: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient background */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
