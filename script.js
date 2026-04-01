@@ -17,10 +17,6 @@ const quotes = [
     "It’s not whether you get knocked down, it’s whether you get up."
 ];
 
-const backgrounds = [
-    "https://wallpapercave.com/wp/wp2467894.jpg"
-];
-
 function updateDisplay() {
     minutesDisplay.textContent = String(minutes).padStart(2, '0');
     secondsDisplay.textContent = String(seconds).padStart(2, '0');
@@ -59,15 +55,6 @@ function resetTimer() {
     updateDisplay();
 }
 
-function setRandomBackground() {
-    const randomBackground = backgrounds[0]; // Use the single cherry blossom wallpaper
-    document.body.style.backgroundImage = `url('${randomBackground}')`;
-    document.body.style.backgroundSize = "cover";
-    document.body.style.backgroundPosition = "center";
-    document.body.style.backgroundRepeat = "no-repeat";
-    document.body.style.height = "100vh";
-}
-
 function setRandomQuote() {
     const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
     document.getElementById('quote').textContent = randomQuote;
@@ -77,6 +64,5 @@ startButton.addEventListener('click', startTimer);
 pauseButton.addEventListener('click', pauseTimer);
 resetButton.addEventListener('click', resetTimer);
 
-setRandomBackground();
 setRandomQuote();
 updateDisplay();
