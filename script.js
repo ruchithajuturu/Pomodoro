@@ -9,6 +9,22 @@ const startButton = document.getElementById('start');
 const pauseButton = document.getElementById('pause');
 const resetButton = document.getElementById('reset');
 
+const quotes = [
+    "The best way to get started is to quit talking and begin doing.",
+    "The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.",
+    "Don’t let yesterday take up too much of today.",
+    "You learn more from failure than from success. Don’t let it stop you. Failure builds character.",
+    "It’s not whether you get knocked down, it’s whether you get up."
+];
+
+const backgrounds = [
+    "url('https://source.unsplash.com/random/1920x1080?nature')",
+    "url('https://source.unsplash.com/random/1920x1080?landscape')",
+    "url('https://source.unsplash.com/random/1920x1080?city')",
+    "url('https://source.unsplash.com/random/1920x1080?abstract')",
+    "url('https://source.unsplash.com/random/1920x1080?space')"
+];
+
 function updateDisplay() {
     minutesDisplay.textContent = String(minutes).padStart(2, '0');
     secondsDisplay.textContent = String(seconds).padStart(2, '0');
@@ -47,8 +63,22 @@ function resetTimer() {
     updateDisplay();
 }
 
+function setRandomBackground() {
+    const randomBackground = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+    document.body.style.backgroundImage = randomBackground;
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundPosition = "center";
+}
+
+function setRandomQuote() {
+    const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+    document.getElementById('quote').textContent = randomQuote;
+}
+
 startButton.addEventListener('click', startTimer);
 pauseButton.addEventListener('click', pauseTimer);
 resetButton.addEventListener('click', resetTimer);
 
+setRandomBackground();
+setRandomQuote();
 updateDisplay();
