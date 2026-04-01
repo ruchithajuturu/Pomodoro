@@ -1,10 +1,8 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-image: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient background */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: #f4f4f4; /* Plain background color */
+    background-image: none; /* Remove any background image */
     height: 100vh;
     margin: 0;
     padding: 0;
