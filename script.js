@@ -18,11 +18,11 @@ const quotes = [
 ];
 
 const backgrounds = [
-    "url('https://source.unsplash.com/random/1920x1080?nature')",
-    "url('https://source.unsplash.com/random/1920x1080?landscape')",
-    "url('https://source.unsplash.com/random/1920x1080?city')",
-    "url('https://source.unsplash.com/random/1920x1080?abstract')",
-    "url('https://source.unsplash.com/random/1920x1080?space')"
+    "https://source.unsplash.com/random/1920x1080?nature",
+    "https://source.unsplash.com/random/1920x1080?landscape",
+    "https://source.unsplash.com/random/1920x1080?city",
+    "https://source.unsplash.com/random/1920x1080?abstract",
+    "https://source.unsplash.com/random/1920x1080?space"
 ];
 
 function updateDisplay() {
@@ -65,9 +65,7 @@ function resetTimer() {
 
 function setRandomBackground() {
     const randomBackground = backgrounds[Math.floor(Math.random() * backgrounds.length)];
-    document.body.style.backgroundImage = randomBackground;
-    document.body.style.backgroundSize = "cover";
-    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundImage = `url(${randomBackground})`;
 }
 
 function setRandomQuote() {
